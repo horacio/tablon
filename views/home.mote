@@ -1,0 +1,19 @@
+<section>
+  <header class="introduction">
+    <h1>Trabajos en Ruby</h1>
+    <p>
+      Oportunidades laborales compartidas en la
+      lista de correo de RubySur.
+    </p>
+  </header>
+  % if jobs.empty?
+    <p>
+      Oops. No tenemos ninguna oferta para
+      mostrarte en este momento.
+    </p>
+  % else
+    % jobs.each do |job|
+      {{ app.partial("job_posting", job: job) }}
+    % end
+  % end
+</section>

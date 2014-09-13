@@ -11,7 +11,7 @@
       </li>
     </ul>
   </header>
-  <p>
+  <pre>
     {{ job['description'] }}
-  </p>
+  </pre>
 </article>

@@ -2,16 +2,16 @@
   <header>
     <h2>{{ job.title }}</h2>
     <ul>
-      <li>{{ job.company }}</li>
       <li>{{ job.posted_on }}</li>
+      <li>{{ job.company }}</li>
+      <li>
+        <a href="mailto:{{ job.email }}?subject={{ job.title }}">
+          {{ job.email }}
+        </a>
+      </li>
     </ul>
   </header>
   <p>
     {{ job.description }}
   </p>
-  <footer>
-    <a
-      href="mailto:{{ job.email }}?subject={{ job.title }}"
-      target="_blank">¡Postulate!</a>
-  </footer>
 </article>

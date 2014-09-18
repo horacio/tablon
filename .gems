@@ -1,3 +1,2 @@
 cuba -v 3.3.0
-mote -v 1.1.2
-mote-render -v 1.1.0
+tilt-mote -v 0.0.4

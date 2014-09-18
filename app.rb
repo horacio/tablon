@@ -1,16 +1,18 @@
 require 'cuba'
-require 'mote'
-require 'mote/render'
+require 'cuba/render'
+require 'cuba/mote'
+require 'tilt/mote'
 
 require 'json'
 
 Cuba.use Rack::Static, urls: ['/media']
 
-Cuba.plugin(Mote::Render)
+Cuba.plugin Cuba::Render
+Cuba.plugin MoteHelper
 
 Cuba.define do
   on root do
-    render('home', jobs: jobs)
+    render('home', app: self, jobs: jobs)
   end
 end
 

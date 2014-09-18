@@ -1,2 +1,2 @@
-require './app'
-run(Cuba)
+require_relative 'app'
+run Cuba
